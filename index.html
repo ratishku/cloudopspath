@@ -3,37 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CloudOpsPath</title>
+
+    <title>CloudOpsPath | Cloud & DevOps Engineering</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111827;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 8%;
+            background: linear-gradient(135deg, #0b1120, #111827);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 13px 22px;
+            margin-right: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #38bdf8;
+            color: #0b1120;
+        }
+
+        .secondary {
+            border: 1px solid #475569;
+            color: #e5e7eb;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            color: #94a3b8;
+            margin-bottom: 35px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        .card p {
+            color: #94a3b8;
+        }
+
+        .roadmap {
+            background: #0f172a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111827;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>CloudOpsPath</h1>
+    <nav>
+        <div class="logo">CloudOpsPath</div>
 
-    <h2>My Cloud & DevOps Journey</h2>
+        <div>
+            <a href="#skills">Skills</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
 
-    <p>
-        Welcome to CloudOpsPath — a technology journey focused on
-        Cloud, DevOps, Automation and Platform Engineering.
-    </p>
+    <section class="hero">
+        <div class="hero-content">
 
-    <hr>
+            <h1>Cloud<span>Ops</span>Path</h1>
 
-    <h3>Coming Soon</h3>
+            <h2>Build. Automate. Operate. Scale.</h2>
 
-    <ul>
-        <li>AWS</li>
-        <li>Linux</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>Terraform</li>
-        <li>CI/CD</li>
-        <li>Cloud Projects</li>
-    </ul>
+            <p>
+                A practical journey into Cloud, DevOps, Automation
+                and Platform Engineering — focused on learning,
+                building real projects and sharing knowledge.
+            </p>
 
-    <p>
-        Built by Ratish Kurup
-    </p>
+            <div class="buttons">
+                <a href="#roadmap" class="primary">Explore Roadmap</a>
+                <a href="#projects" class="secondary">View Projects</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+
+        <h2>Cloud & DevOps Technologies</h2>
+
+        <p class="section-intro">
+            The technologies and practices behind modern cloud infrastructure.
+        </p>
+
+        <div class="skills">
+
+            <div class="card">
+                <h3>☁️ AWS</h3>
+                <p>Cloud infrastructure, networking, IAM, compute and storage.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐧 Linux</h3>
+                <p>Linux administration, troubleshooting and automation.</p>
+            </div>
+
+            <div class="card">
+                <h3>🐳 Docker</h3>
+                <p>Containerization and modern application deployment.</p>
+            </div>
+
+            <div class="card">
+                <h3>☸️ Kubernetes</h3>
+                <p>Container orchestration and cloud-native workloads.</p>
+            </div>
+
+            <div class="card">
+                <h3>🏗️ Terraform</h3>
+                <p>Infrastructure as Code and automated provisioning.</p>
+            </div>
+
+            <div class="card">
+                <h3>🔄 CI/CD</h3>
+                <p>Continuous integration and automated deployments.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="roadmap" class="roadmap">
+
+        <h2>CloudOpsPath Roadmap</h2>
+
+        <p class="section-intro">
+            A structured path from IT operations fundamentals
+            to Cloud and DevOps engineering.
+        </p>
+
+        <div class="skills">
+
+            <div class="card">
+                <h3>01 — Foundations</h3>
+                <p>Linux, networking, Git and scripting.</p>
+            </div>
+
+            <div class="card">
+                <h3>02 — Cloud</h3>
+                <p>AWS fundamentals, architecture, security and networking.</p>
+            </div>
+
+            <div class="card">
+                <h3>03 — Containers</h3>
+                <p>Docker, Kubernetes and cloud-native concepts.</p>
+            </div>
+
+            <div class="card">
+                <h3>04 — Automation</h3>
+                <p>Terraform, CI/CD, Python and infrastructure automation.</p>
+            </div>
+
+            <div class="card">
+                <h3>05 — DevOps</h3>
+                <p>Monitoring, observability, deployment and reliability.</p>
+            </div>
+
+            <div class="card">
+                <h3>06 — Platform Engineering</h3>
+                <p>Build scalable developer platforms and cloud environments.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <p class="section-intro">
+            Real-world Cloud and DevOps projects will be added here.
+        </p>
+
+        <div class="skills">
+
+            <div class="card">
+                <h3>Coming Soon</h3>
+                <p>AWS infrastructure project</p>
+            </div>
+
+            <div class="card">
+                <h3>Coming Soon</h3>
+                <p>Docker & Kubernetes project</p>
+            </div>
+
+            <div class="card">
+                <h3>Coming Soon</h3>
+                <p>Terraform Infrastructure as Code project</p>
+            </div>
+
+            <div class="card">
+                <h3>Coming Soon</h3>
+                <p>CI/CD automation project</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about">
+
+        <h2>About CloudOpsPath</h2>
+
+        <p class="section-intro">
+            CloudOpsPath is a learning and technology platform focused on
+            practical Cloud, DevOps and Platform Engineering knowledge.
+            The goal is simple: learn continuously, build real solutions
+            and share the journey.
+        </p>
+
+    </section>
+
+    <footer>
+        © 2026 CloudOpsPath — Built by Ratish Kurup
+    </footer>
 
 </body>
 </html>
