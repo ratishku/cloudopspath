@@ -575,11 +575,263 @@
             }
         }
 
+
+
+        /* =========================
+           CLOUDOPSPATH AUTH GATE
+        ========================= */
+
+        #site-content {
+            display: none;
+        }
+
+        #auth-gate {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 15% 30%, rgba(56, 189, 248, 0.12), transparent 34%),
+                radial-gradient(circle at 85% 70%, rgba(14, 165, 233, 0.06), transparent 30%),
+                #080d18;
+            color: #e5edf7;
+        }
+
+        .auth-shell {
+            width: min(1180px, 92%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 420px;
+            gap: 70px;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .auth-brand {
+            max-width: 650px;
+        }
+
+        .auth-logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.7px;
+            margin-bottom: 45px;
+        }
+
+        .auth-logo span {
+            color: #38bdf8;
+        }
+
+        .auth-eyebrow {
+            display: inline-flex;
+            padding: 7px 13px;
+            border: 1px solid #1e4b63;
+            border-radius: 30px;
+            color: #67d3ff;
+            background: rgba(14, 165, 233, 0.06);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            margin-bottom: 22px;
+        }
+
+        .auth-brand h1 {
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 1.04;
+            letter-spacing: -3px;
+            margin-bottom: 22px;
+        }
+
+        .auth-brand h1 span {
+            color: #38bdf8;
+        }
+
+        .auth-brand p {
+            max-width: 570px;
+            color: #94a3b8;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .auth-features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 13px 24px;
+            list-style: none;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .auth-features li::before {
+            content: "✓";
+            color: #38bdf8;
+            font-weight: 800;
+            margin-right: 9px;
+        }
+
+        .auth-card {
+            background: #0d1524;
+            border: 1px solid #223149;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.38);
+        }
+
+        .auth-card-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .auth-card-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            background: rgba(56, 189, 248, 0.10);
+            border: 1px solid #1e4b63;
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        .auth-card-header h2 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .auth-card-header p {
+            color: #7f8da2;
+            font-size: 13px;
+        }
+
+        #sign-in {
+            width: 100%;
+        }
+
+        .auth-footer {
+            margin-top: 16px;
+            text-align: center;
+            color: #64748b;
+            font-size: 11px;
+        }
+
+        .clerk-user-button {
+            display: flex;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        @media (max-width: 850px) {
+            #auth-gate {
+                align-items: flex-start;
+            }
+
+            .auth-shell {
+                grid-template-columns: 1fr;
+                gap: 35px;
+                padding: 35px 0;
+            }
+
+            .auth-brand {
+                text-align: center;
+                margin: auto;
+            }
+
+            .auth-logo {
+                margin-bottom: 25px;
+            }
+
+            .auth-brand p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .auth-card {
+                width: min(420px, 100%);
+                margin: auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .auth-features {
+                grid-template-columns: 1fr;
+            }
+
+            .auth-shell {
+                width: min(92%, 420px);
+            }
+        }
+
     </style>
 </head>
 
 
 <body>
+
+    <!-- =========================
+         CLOUDOPSPATH LOGIN GATE
+    ========================= -->
+
+    <div id="auth-gate">
+
+        <div class="auth-shell">
+
+            <div class="auth-brand">
+
+                <div class="auth-logo">
+                    Cloud<span>Ops</span>Path
+                </div>
+
+                <div class="auth-eyebrow">
+                    CLOUD • DEVOPS • AUTOMATION • PLATFORM
+                </div>
+
+                <h1>
+                    Build your path to
+                    <span>Cloud &amp; DevOps.</span>
+                </h1>
+
+                <p>
+                    Learn practical Cloud, DevOps and Platform Engineering
+                    through structured learning, hands-on projects and
+                    real-world automation.
+                </p>
+
+                <ul class="auth-features">
+                    <li>Cloud &amp; DevOps learning paths</li>
+                    <li>Hands-on infrastructure projects</li>
+                    <li>AWS, Docker &amp; Kubernetes</li>
+                    <li>Terraform &amp; CI/CD</li>
+                    <li>Automation &amp; Platform Engineering</li>
+                    <li>Practical engineering documentation</li>
+                </ul>
+
+            </div>
+
+            <div class="auth-card">
+
+                <div class="auth-card-header">
+                    <div class="auth-card-icon">☁</div>
+                    <h2>Welcome to CloudOpsPath</h2>
+                    <p>Sign in to continue your journey.</p>
+                </div>
+
+                <div id="sign-in"></div>
+
+                <div class="auth-footer">
+                    Secure authentication powered by Clerk
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Existing CloudOpsPath website; hidden until authenticated -->
+    <div id="site-content">
+
 
     <!-- =========================
          NAVIGATION
@@ -610,6 +862,8 @@
                 >
                     GitHub
                 </a>
+
+                <div id="user-button" class="clerk-user-button"></div>
 
             </div>
 
@@ -1130,6 +1384,132 @@
 
     </footer>
 
+    </div><!-- /#site-content -->
+
+    <!-- =========================
+         CLERK AUTHENTICATION
+    ========================= -->
+
+    <!-- IMPORTANT: Replace ONLY the two placeholders below with the
+         Frontend API URL and Publishable Key from Clerk.
+         Never put your sk_test_... Secret Key in this file. -->
+
+    <script
+        defer
+        crossorigin="anonymous"
+        src="https://splendid-gobbler-5788.clerk.accounts.dev/npm/@clerk/ui@1/dist/ui.browser.js"
+        type="text/javascript"
+    ></script>
+
+    <script
+        defer
+        crossorigin="anonymous"
+        data-clerk-publishable-key="pk_test_c3BsZW5kaWQtZ29iYmxlci01Nzg4LmNsZXJrLmFjY291bnRzLmRldg$"
+        src="https://splendid-gobbler-5788.clerk.accounts.dev/npm/@clerk/clerk-js@6/dist/clerk.browser.js"
+        type="text/javascript"
+    ></script>
+
+    <script>
+        window.addEventListener('load', async function () {
+
+            try {
+
+                await Clerk.load({
+                    ui: {
+                        ClerkUI: window.__internal_ClerkUICtor
+                    },
+                    appearance: {
+                        variables: {
+                            colorPrimary: '#38bdf8',
+                            colorPrimaryForeground: '#06111d',
+                            colorForeground: '#e5edf7',
+                            colorMutedForeground: '#94a3b8',
+                            colorBackground: '#0d1524',
+                            colorInput: '#0b1220',
+                            colorInputForeground: '#e5edf7',
+                            colorBorder: '#223149',
+                            colorNeutral: '#1b293d',
+                            colorRing: '#38bdf8',
+                            borderRadius: '8px',
+                            fontFamily: 'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+                        }
+                    },
+                    afterSignOutUrl: window.location.origin + '/'
+                });
+
+                const authGate = document.getElementById('auth-gate');
+                const siteContent = document.getElementById('site-content');
+                const signInDiv = document.getElementById('sign-in');
+                const userButtonDiv = document.getElementById('user-button');
+
+                let signInMounted = false;
+                let userButtonMounted = false;
+
+                function showLogin() {
+                    siteContent.style.display = 'none';
+                    authGate.style.display = 'flex';
+
+                    if (userButtonMounted) {
+                        Clerk.unmountUserButton(userButtonDiv);
+                        userButtonMounted = false;
+                    }
+
+                    if (!signInMounted) {
+                        Clerk.mountSignIn(signInDiv);
+                        signInMounted = true;
+                    }
+                }
+
+                function showSite() {
+                    authGate.style.display = 'none';
+                    siteContent.style.display = 'block';
+
+                    if (signInMounted) {
+                        Clerk.unmountSignIn(signInDiv);
+                        signInDiv.innerHTML = '';
+                        signInMounted = false;
+                    }
+
+                    if (!userButtonMounted) {
+                        Clerk.mountUserButton(userButtonDiv);
+                        userButtonMounted = true;
+                    }
+                }
+
+                if (Clerk.isSignedIn) {
+                    showSite();
+                } else {
+                    showLogin();
+                }
+
+                Clerk.addListener(function ({ session }) {
+                    if (session) {
+                        showSite();
+                    } else {
+                        showLogin();
+                    }
+                });
+
+            } catch (error) {
+                console.error('CloudOpsPath authentication error:', error);
+
+                document.getElementById('sign-in').innerHTML = `
+                    <div style="
+                        padding: 20px;
+                        border: 1px solid #7f1d1d;
+                        border-radius: 8px;
+                        color: #fecaca;
+                        background: #1c0b0b;
+                        font-size: 14px;
+                    ">
+                        Authentication could not be loaded.
+                        Please refresh the page and try again.
+                    </div>
+                `;
+            }
+
+        });
+    </script>
 
 </body>
 </html>
